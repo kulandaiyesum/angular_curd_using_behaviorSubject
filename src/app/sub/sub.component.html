@@ -1,0 +1,8 @@
+<div *ngIf="data$ | async as data">
+  <h2>Data List</h2>
+  {{ data | json }}
+  <ul>
+    <li *ngFor="let dataItem of data">
+      {{ dataItem.id }} {{ dataItem.name }}
+    </li>
+  </ul>
